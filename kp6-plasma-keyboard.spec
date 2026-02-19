@@ -8,7 +8,7 @@
 Summary:	Plasma Keyboard
 Name:		kp6-%{kpname}
 Version:	6.6.0
-Release:	1
+Release:	2
 License:	LGPL v2.1+
 Group:		X11/Applications
 Source0:	https://download.kde.org/stable/plasma/%{kdeplasmaver}/%{kpname}-%{version}.tar.xz
@@ -16,6 +16,7 @@ Source0:	https://download.kde.org/stable/plasma/%{kdeplasmaver}/%{kpname}-%{vers
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel >= %{qtver}
+BuildRequires:	Qt6VirtualKeyboard-devel >= %{qtver}
 BuildRequires:	Qt6WaylandClient-devel >= %{qtver}
 BuildRequires:	cmake >= 3.16.0
 BuildRequires:	gettext-tools
