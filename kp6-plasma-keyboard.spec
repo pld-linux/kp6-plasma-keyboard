@@ -8,7 +8,7 @@
 Summary:	Plasma Keyboard
 Name:		kp6-%{kpname}
 Version:	6.6.0
-Release:	2
+Release:	3
 License:	LGPL v2.1+
 Group:		X11/Applications
 Source0:	https://download.kde.org/stable/plasma/%{kdeplasmaver}/%{kpname}-%{version}.tar.xz
@@ -83,6 +83,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/plasma-keyboard
 %{_libdir}/qt6/plugins/plasma/kcms/systemsettings/kcm_plasmakeyboard.so
+%dir %{_libdir}/qt6/qml/QtQuick/VirtualKeyboard/Styles/Breeze
 %{_libdir}/qt6/qml/QtQuick/VirtualKeyboard/Styles/Breeze/breezestyle.qmltypes
 %{_libdir}/qt6/qml/QtQuick/VirtualKeyboard/Styles/Breeze/kde-qmlmodule.version
 %{_libdir}/qt6/qml/QtQuick/VirtualKeyboard/Styles/Breeze/libbreezestyle.so
