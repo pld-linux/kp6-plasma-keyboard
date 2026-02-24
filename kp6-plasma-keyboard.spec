@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeplasmaver	6.6.0
+%define		kdeplasmaver	6.6.1
 %define		qtver		6.10.0
 %define		kpname		plasma-keyboard
 
 Summary:	Plasma Keyboard
 Name:		kp6-%{kpname}
-Version:	6.6.0
-Release:	3
+Version:	6.6.1
+Release:	1
 License:	LGPL v2.1+
 Group:		X11/Applications
 Source0:	https://download.kde.org/stable/plasma/%{kdeplasmaver}/%{kpname}-%{version}.tar.xz
-# Source0-md5:	0ab280ccc8e3fd92da9fdad445834963
+# Source0-md5:	628e60b77b3eab550875de3949aa35f7
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel >= %{qtver}
