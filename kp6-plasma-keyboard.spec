@@ -43,9 +43,10 @@ The plasma-keyboard is a virtual keyboard based on [Qt Virtual
 Keyboard](https://doc.qt.io/qt-6/qtvirtualkeyboard-overview.html)
 designed to integrate in Plasma.
 
-It wraps Qt Virtual Keyboard in a window, and uses the input-method-v1
-Wayland protocol to communicate with the compositor to function as an
-input method.
+%description -l pl.UTF-8
+plasma-keyboard jest wirtualną klawiaturą opartą na [Qt Virtual
+Keyboard](https://doc.qt.io/qt-6/qtvirtualkeyboard-overview.html)
+zaprojektowaną do integracji z Plazmą.
 
 %prep
 %setup -q -n %{kpname}-%{version}
