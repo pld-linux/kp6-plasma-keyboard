@@ -2,6 +2,7 @@
 # Conditional build:
 %bcond_with	tests		# build with tests
 %define		kdeplasmaver	6.7.4
+%define		kfver		6.26.0
 %define		qtver		6.10.0
 %define		kpname		plasma-keyboard
 
@@ -16,20 +17,26 @@ Source0:	https://download.kde.org/stable/plasma/%{kdeplasmaver}/%{kpname}-%{vers
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel >= %{qtver}
+%{?with_tests:BuildRequires:	Qt6Test-devel >= %{qtver}}
 BuildRequires:	Qt6VirtualKeyboard-devel >= %{qtver}
 BuildRequires:	Qt6WaylandClient-devel >= %{qtver}
+%{?with_tests:BuildRequires:	Qt6WaylandCompositor-devel >= %{qtver}}
 BuildRequires:	cmake >= 3.16.0
 BuildRequires:	gettext-tools
-BuildRequires:	kf6-extra-cmake-modules >= 6.22.0
-BuildRequires:	kf6-kcmutils-devel >= 6.22.0
-BuildRequires:	kf6-kconfig-devel >= 6.22.0
-BuildRequires:	kf6-kcoreaddons-devel >= 6.23.0
-BuildRequires:	kf6-ki18n-devel >= 6.22.0
+BuildRequires:	kf6-extra-cmake-modules >= %{kfver}
+BuildRequires:	kf6-kcmutils-devel >= %{kfver}
+BuildRequires:	kf6-kconfig-devel >= %{kfver}
+BuildRequires:	kf6-kcoreaddons-devel >= %{kfver}
+BuildRequires:	kf6-kcrash-devel >= %{kfver}
+BuildRequires:	kf6-ki18n-devel >= %{kfver}
+BuildRequires:	libstdc++-devel >= 6:8
 BuildRequires:	ninja
 BuildRequires:	pkgconfig
-BuildRequires:	rpmbuild(macros) >= 1.164
+BuildRequires:	rpmbuild(macros) >= 1.736
+BuildRequires:	tar >= 1:1.22
 BuildRequires:	wayland-devel >= 1.2
 BuildRequires:	wayland-protocols >= 1.19
+BuildRequires:	xorg-lib-libxkbcommon-devel
 BuildRequires:	xz
 Requires(post,postun):	desktop-file-utils
 %requires_eq_to Qt6Core Qt6Core-devel
