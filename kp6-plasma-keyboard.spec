@@ -29,6 +29,7 @@ BuildRequires:	kf6-kconfig-devel >= %{kfver}
 BuildRequires:	kf6-kcoreaddons-devel >= %{kfver}
 BuildRequires:	kf6-kcrash-devel >= %{kfver}
 BuildRequires:	kf6-ki18n-devel >= %{kfver}
+BuildRequires:	kp6-libplasma-devel >= 6.7.0
 BuildRequires:	libstdc++-devel >= 6:8
 BuildRequires:	ninja
 BuildRequires:	pkgconfig
